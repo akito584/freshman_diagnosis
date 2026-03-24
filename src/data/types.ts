@@ -17,7 +17,7 @@ export const ENTREPRENEUR_TYPES: Record<AnswerKey, EntrepreneurType> = {
   A: {
     id: "A",
     name: "アイデアひらめき型",
-    imagePath: "/images/type-idea.png",
+    imagePath: "/images/type-idea.jpg",
     themeColor: "#F59E0B",
     gradientFrom: "from-yellow-400",
     gradientTo: "to-amber-500",
@@ -29,7 +29,7 @@ export const ENTREPRENEUR_TYPES: Record<AnswerKey, EntrepreneurType> = {
   B: {
     id: "B",
     name: "共感プロデューサー型",
-    imagePath: "/images/type-producer.png",
+    imagePath: "/images/type-producer.jpg",
     themeColor: "#10B981",
     gradientFrom: "from-emerald-400",
     gradientTo: "to-green-500",
@@ -41,7 +41,7 @@ export const ENTREPRENEUR_TYPES: Record<AnswerKey, EntrepreneurType> = {
   C: {
     id: "C",
     name: "コツコツ実行型",
-    imagePath: "/images/type-executor.png",
+    imagePath: "/images/type-executor.jpg",
     themeColor: "#78716C",
     gradientFrom: "from-stone-400",
     gradientTo: "to-stone-600",
@@ -53,7 +53,7 @@ export const ENTREPRENEUR_TYPES: Record<AnswerKey, EntrepreneurType> = {
   D: {
     id: "D",
     name: "挑戦アクション型",
-    imagePath: "/images/type-action.png",
+    imagePath: "/images/type-action.jpg",
     themeColor: "#EF4444",
     gradientFrom: "from-red-400",
     gradientTo: "to-rose-600",
@@ -65,7 +65,7 @@ export const ENTREPRENEUR_TYPES: Record<AnswerKey, EntrepreneurType> = {
   E: {
     id: "E",
     name: "分析クリエイター型",
-    imagePath: "/images/type-creator.png",
+    imagePath: "/images/type-creator.jpg",
     themeColor: "#3B82F6",
     gradientFrom: "from-blue-400",
     gradientTo: "to-indigo-600",
