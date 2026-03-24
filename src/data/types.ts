@@ -41,7 +41,7 @@ export const ENTREPRENEUR_TYPES: Record<AnswerKey, EntrepreneurType> = {
   C: {
     id: "C",
     name: "コツコツ実行型",
-    imagePath: "/images/type-executor.jpg",
+    imagePath: "/images/type-executer.jpg",
     themeColor: "#78716C",
     gradientFrom: "from-stone-400",
     gradientTo: "to-stone-600",
