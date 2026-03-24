@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brick-50:  #fdf0ec;
+  --color-brick-100: #f9d6ca;
+  --color-brick-400: #d4644a;
+  --color-brick-500: #b5451b;
+  --color-brick-600: #923715;
+  --color-brick-700: #6e2a10;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
