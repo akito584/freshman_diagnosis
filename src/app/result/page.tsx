@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -11,6 +11,7 @@ function ResultContent() {
   const searchParams = useSearchParams();
   const typeKey = (searchParams.get("type") ?? "A") as AnswerKey;
   const type = ENTREPRENEUR_TYPES[typeKey] ?? ENTREPRENEUR_TYPES["A"];
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center">
@@ -27,21 +28,21 @@ function ResultContent() {
 
           {/* キャラクター画像エリア */}
           <div className="w-40 h-40 rounded-full bg-white/20 border-4 border-white/40 flex items-center justify-center overflow-hidden shadow-lg mb-4">
-            <Image
-              src={type.imagePath}
-              alt={type.name}
-              width={160}
-              height={160}
-              className="object-cover w-full h-full"
-              onError={(e) => {
-                // 画像がない場合はフォールバック表示
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
-            />
-            {/* 画像プレースホルダー (画像未設定時に表示) */}
-            <span className="text-6xl absolute">
-              {typeKey === "A" ? "💡" : typeKey === "B" ? "🤝" : typeKey === "C" ? "📋" : typeKey === "D" ? "🚀" : "🔍"}
-            </span>
+            {!imgError ? (
+              <Image
+                key={type.imagePath}
+                src={type.imagePath}
+                alt={type.name}
+                width={160}
+                height={160}
+                className="object-contain w-full h-full"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <span className="text-6xl">
+                {typeKey === "A" ? "💡" : typeKey === "B" ? "🤝" : typeKey === "C" ? "📋" : typeKey === "D" ? "🚀" : "🔍"}
+              </span>
+            )}
           </div>
         </motion.div>
 
